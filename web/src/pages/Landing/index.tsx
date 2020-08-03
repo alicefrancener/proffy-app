@@ -2,13 +2,16 @@ import React from "react";
 
 import logoImg from "../../assets/images/logo.svg";
 import ladingImd from "../../assets/images/landing.svg";
+
 import studyIcon from "../../assets/images/icons/study.svg";
 import giveClassesIcons from "../../assets/images/icons/give-classes.svg";
 import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 
+import "./styles.css";
+
 function Landing() {
   return (
-    <div id="page">
+    <div id="page-landing">
       <div id="page-landing-content" className="container">
         <div id="logo-container">
           <img src={logoImg} alt="Proffy" />

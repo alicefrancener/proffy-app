@@ -29,3 +29,9 @@
   line-height: 4.6rem;
   margin-top: 0.8rem;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem 0;
+}

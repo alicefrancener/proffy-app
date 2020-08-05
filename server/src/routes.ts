@@ -54,8 +54,6 @@ routes.post("/classes", async (request, response) => {
       error: "Unexpected error while creating new class",
     });
   }
-
-  return response.send();
 });
 
 export default routes;

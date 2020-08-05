@@ -3,6 +3,7 @@ import React from "react";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
 import Textarea from "../../components/Textarea";
+import Select from "../../components/Select";
 
 import warningIcon from "../../assets/images/icons/warning.svg";
 
@@ -22,13 +23,80 @@ function TeacherForm() {
           <Input name="name" label="Nome completo" />
           <Input name="avatar" label="Avatar" />
           <Input name="whatsapp" label="WhatsApp" />
-          <Textarea name="bio" label="Biografia"/>
+          <Textarea name="bio" label="Biografia" />
         </fieldset>
 
         <fieldset>
           <legend>Sobre a aula</legend>
-          <Input name="subject" label="Matéria" />
+          <Select
+            name="subject"
+            label="Matéria"
+            options={[
+              {
+                value: "Algoritmos e estrutura de dados",
+                label: "Algoritmos e estrutura de dados",
+              },
+              {
+                value: "Construção de software",
+                label: "Construção de software",
+              },
+              { value: "Design de software", label: "Design de software" },
+              {
+                value: "Introdução à programação",
+                label: "Introdução à programação",
+              },
+              { value: "Lógica matemática", label: "Lógica matemática" },
+              { value: "Matemática discreta", label: "Matemática discreta" },
+              {
+                value: "Programação orientada a objetos",
+                label: "Programação orientada a objetos",
+              },
+              {
+                value: "Redes de computadores",
+                label: "Redes de computadores",
+              },
+            ]}
+          />
           <Input name="cost" label="Custo da sua hora por aula (em R$)" />
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Horários disponíveis <button type="button">+ Novo horário</button>
+          </legend>
+          <div className="schedule-item">
+            <Select
+              name="subject"
+              label="Matéria"
+              options={[
+                {
+                  value: "Algoritmos e estrutura de dados",
+                  label: "Algoritmos e estrutura de dados",
+                },
+                {
+                  value: "Construção de software",
+                  label: "Construção de software",
+                },
+                { value: "Design de software", label: "Design de software" },
+                {
+                  value: "Introdução à programação",
+                  label: "Introdução à programação",
+                },
+                { value: "Lógica matemática", label: "Lógica matemática" },
+                { value: "Matemática discreta", label: "Matemática discreta" },
+                {
+                  value: "Programação orientada a objetos",
+                  label: "Programação orientada a objetos",
+                },
+                {
+                  value: "Redes de computadores",
+                  label: "Redes de computadores",
+                },
+              ]}
+            />
+            <Input name="from" label="Das" type="time" />
+            <Input name="to" label="Até" type="time" />
+          </div>
         </fieldset>
 
         <footer>

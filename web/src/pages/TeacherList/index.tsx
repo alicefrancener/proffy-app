@@ -5,6 +5,8 @@ import TeacherItem from "../../components/TeacherItem";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 
+import api from "../../services/api";
+
 import "./styles.css";
 
 function TeacherList() {
@@ -12,9 +14,17 @@ function TeacherList() {
   const [week_day, setWeekDay] = useState("");
   const [time, setTime] = useState("");
 
-  function seacherTeachers(e: FormEvent) {
+  async function seacherTeachers(e: FormEvent) {
     e.preventDefault();
-    console.log();
+    const response = await api.get("/classes", {
+      params: {
+        subject,
+        week_day,
+        time,
+      },
+    });
+
+    console.log(response.data);
   }
 
   return (

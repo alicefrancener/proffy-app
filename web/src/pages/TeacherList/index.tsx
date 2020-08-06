@@ -80,6 +80,7 @@ function TeacherList() {
               setTime(e.target.value);
             }}
           />
+          <button type="submit">Buscar</button>
         </form>
       </PageHeader>
 

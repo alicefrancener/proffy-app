@@ -6,8 +6,8 @@ import landingImg from '../../assets/images/landing.png';
 
 function Landing() {
   return (
-    <View >
-      <Image source={landingImg}/>
+    <View style={styles.container}>
+      <Image source={landingImg} style={styles.banner}/>
     </View>
   )
 }

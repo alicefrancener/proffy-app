@@ -1,8 +1,15 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Image } from "react-native";
+import styles from "./styles";
+
+import landingImg from '../../assets/images/landing.png';
 
 function Landing() {
-  return <View />;
+  return (
+    <View >
+      <Image source={landingImg}/>
+    </View>
+  )
 }
 
 export default Landing;

@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    fontFamily: 'Poppins_400Regular',
     color: "#FFF",
     fontSize: 20,
     lineHeight: 30,
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
   },
 
   titleBold: {
-    fontWeight: "bold",
+    fontFamily: "Poppins_600SemiBold"
   },
 });
 
